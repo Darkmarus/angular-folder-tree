@@ -1,0 +1,42 @@
+app-folder-tree {
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  .folder-tree {
+    position: relative;
+  }
+  .folder-tree-item {
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left: 1px dashed #ddd;
+    img{
+      margin-right: .25rem;
+    }
+  }
+
+  .folder-tree-item-name {
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    &:hover {
+      .folder-tree-item-name-text {
+        color: #000;
+      }
+    }
+  }
+
+  .folder-tree-item-name-text {
+    border-bottom: 1px solid transparent;
+    color: #777;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .folder-tree-item-children {
+    overflow: hidden;
+    transition: height 200ms;
+  }
+}

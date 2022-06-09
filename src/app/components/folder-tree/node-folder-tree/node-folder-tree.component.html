@@ -1,0 +1,13 @@
+<div class="folder-tree-item" *ngIf="nodeFolder">
+  <div class="folder-tree-item-name" (click)="flag = !flag">
+    <img src="assets/folder.svg" alt="folder" width="16" />
+    <span class="folder-tree-item-name-text">{{ nodeFolder.name }}</span>
+  </div>
+
+  <div class="folder-tree-item-children" [style.height]="flag ? 'auto' : '0px'">
+    <app-folder-tree
+      *ngIf="nodeFolder.children"
+      [data]="nodeFolder.children"
+    ></app-folder-tree>
+  </div>
+</div>
