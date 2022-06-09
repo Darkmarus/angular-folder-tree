@@ -9,11 +9,12 @@ app-folder-tree {
     position: relative;
   }
   .folder-tree-item {
+    user-select: none;
     margin-left: 5px;
     padding-left: 10px;
     border-left: 1px dashed #ddd;
-    img{
-      margin-right: .25rem;
+    img {
+      margin-right: 0.25rem;
     }
   }
 
@@ -35,8 +36,16 @@ app-folder-tree {
     text-decoration: none;
     transition: all 0.2s ease;
   }
+
   .folder-tree-item-children {
     overflow: hidden;
     transition: height 200ms;
+  }
+
+  .selected {
+    background-color: rgb(140, 193, 228);
+    .folder-tree-item-name-text {
+      color: #000;
+    }
   }
 }
