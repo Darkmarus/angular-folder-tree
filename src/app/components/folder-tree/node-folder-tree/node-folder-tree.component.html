@@ -1,7 +1,7 @@
 <div class="folder-tree-item" *ngIf="nodeFolder">
-  <div class="folder-tree-item-name" [class.selected]="nodeFolder.selected">
+  <div class="folder-tree-item-name" [class.selected]="nodeFolder.selected" (click)="selectedFolder()">
     <img [src]="'assets/'+getFolderToggleSVG()" alt="folder" width="16" (click)="flag = !flag"/>
-    <span class="folder-tree-item-name-text" (click)="selectedFolder()">{{ nodeFolder.name }}</span>
+    <span class="folder-tree-item-name-text">{{ nodeFolder.name }}</span>
   </div>
 
   <div class="folder-tree-item-children" [style.height]="flag ? 'auto' : '0px'">
