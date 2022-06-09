@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Folder } from './../models/folder.interface';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
 export class FolderService {
   private _folderSelected?: Folder;
